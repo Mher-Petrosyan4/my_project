@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>New title from html file</h1>
+<h3>Hello Dear {{users}}</h3>
+
+{% for user in users %}
+{% if user.is_verified %}
+<h3>hello {{user.name}}</h3>
+{% else %}
+{% if user.age < 20 %}
+<h3>hello not verified  {{user.name}}</h3>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+</body>
+</html>
